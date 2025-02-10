@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Happy Birthday Website</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body, html {
+      height: 100%;
+      font-family: Arial, sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background: linear-gradient(135deg, #ffb6c1, #ffeb3b); /* Farbiger Verlauf (Pink zu Gelb) */
+      overflow: hidden; /* Verhindert Scrollen wegen der bewegten Emojis */
+    }
+
+    .container {
+      text-align: center;
+      position: relative;
+      width: 100%;
+      height: 100%;
+    }
+
+    /* Happy Birthday Text */
+    .birthday-text h1 {
+      font-size: 3rem;
+      color: #ff5733;
+      animation: moveText 5s ease-in-out infinite;
+    }
+
+    @keyframes moveText {
+      0% {
+        transform: translateY(-30px);
+      }
+      50% {
+        transform: translateY(30px);
+      }
+      100% {
+        transform: translateY(-30px);
+      }
+    }
+
+    /* Emote Animation */
+    .emote {
+      position: absolute;
+      font-size: 3rem;
+      animation: moveEmote 10s linear infinite;
+    }
+
+    @keyframes moveEmote {
+      0% {
+        transform: translate(0, 0);
+      }
+      25% {
+        transform: translate(200px, 100px);
+      }
+      50% {
+        transform: translate(0, 200px);
+      }
+      75% {
+        transform: translate(-200px, 100px);
+      }
+      100% {
+        transform: translate(0, 0);
+      }
+    }
+
+    /* QR Code Platzhalter */
+    .qr-placeholder {
+      position: absolute;
+      bottom: 20%;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 200px;
+      height: 200px;
+      background-color: #e0e0e0;
+      border: 2px dashed #888;
+      color: #555;
+      line-height: 200px;
+      font-size: 1.2rem;
+      font-weight: bold;
+      display: inline-block;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <!-- Geburtstags-Text -->
+    <div class="birthday-text">
+      <h1>Happy Birthday</h1>
+    </div>
+
+    <!-- Verschiedene Emojis -->
+    <div class="emote" style="top: 10%; left: 10%;">🎉</div>
+    <div class="emote" style="top: 20%; left: 60%;">🎂</div>
+    <div class="emote" style="top: 40%; left: 30%;">🎁</div>
+    <div class="emote" style="top: 60%; left: 70%;">🎈</div>
+    <div class="emote" style="top: 70%; left: 20%;">🥳</div>
+    <div class="emote" style="top: 80%; left: 50%;">🍰</div>
+
+    <!-- QR Code Platzhalter -->
+    <div class="qr-placeholder">
+      <p>QR-Code hier</p>
+    </div>
+  </div>
+
+  <script>
+    // Hier kannst du zukünftige Interaktionen oder Animationen hinzufügen, falls gewünscht
+  </script>
+</body>
+</html>
+
