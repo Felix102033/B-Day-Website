@@ -19,6 +19,7 @@
       align-items: center;
       background: linear-gradient(135deg, #ffb6c1, #ffeb3b); /* Farbiger Verlauf (Pink zu Gelb) */
       overflow: hidden; /* Verhindert Scrollen wegen der bewegten Emojis */
+      touch-action: manipulation; /* Stellt sicher, dass der Link auch touch-freundlich ist */
     }
 
     .container {
@@ -26,6 +27,7 @@
       position: relative;
       width: 100%;
       height: 100%;
+      padding: 20px; /* Verhindert, dass der Inhalt zu nah am Rand des Bildschirms ist */
     }
 
     /* Happy Birthday Text */
@@ -75,21 +77,34 @@
     /* Nur URL anzeigen ohne Hintergrund */
     .url {
       position: absolute;
-      bottom: 20%;
+      bottom: 10%;
       left: 50%;
       transform: translateX(-50%);
       font-size: 1.5rem;
       font-weight: bold;
       color: #333;
+      max-width: 90%; /* Maximale Breite auf mobilen Geräten */
+      word-wrap: break-word; /* Wenn die URL zu lang ist, wird sie umgebrochen */
     }
 
     .url a {
       text-decoration: none; /* Entfernt die Unterstreichung */
       color: #1e90ff; /* Farbe für den Link */
+      font-size: 1.2rem; /* Etwas kleinere Schriftgröße für Mobilgeräte */
     }
 
     .url a:hover {
       text-decoration: underline; /* Fügt eine Unterstreichung beim Überfahren hinzu */
+    }
+
+    /* Responsive Design für kleinere Bildschirme */
+    @media (max-width: 768px) {
+      .birthday-text h1 {
+        font-size: 2rem;
+      }
+      .emote {
+        font-size: 2.5rem;
+      }
     }
   </style>
 </head>
@@ -119,6 +134,7 @@
   </script>
 </body>
 </html>
+
 
 
 
