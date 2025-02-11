@@ -82,6 +82,15 @@
       font-weight: bold;
       color: #333;
     }
+
+    .url a {
+      text-decoration: none; /* Entfernt die Unterstreichung */
+      color: #1e90ff; /* Farbe für den Link */
+    }
+
+    .url a:hover {
+      text-decoration: underline; /* Fügt eine Unterstreichung beim Überfahren hinzu */
+    }
   </style>
 </head>
 <body>
@@ -99,9 +108,9 @@
     <div class="emote" style="top: 70%; left: 20%;">🥳</div>
     <div class="emote" style="top: 80%; left: 50%;">🍰</div>
 
-    <!-- URL anzeigen ohne Hintergrund -->
+    <!-- Klickbare URL -->
     <div class="url">
-      <p>https://makerworld.com/de/models/13716#profileId-14572</p>
+      <a href="https://makerworld.com/de/models/13716#profileId-14572" target="_blank">https://makerworld.com/de/models/13716#profileId-14572</a>
     </div>
   </div>
 
@@ -109,8 +118,6 @@
     // Hier kannst du zukünftige Interaktionen oder Animationen hinzufügen, falls gewünscht
   </script>
 </body>
-</html>
-
 </html>
 
 
